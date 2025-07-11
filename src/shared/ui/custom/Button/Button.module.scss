@@ -1,0 +1,31 @@
+@use "../../../../styles/variables";
+
+.button {
+  border: none;
+  background: none;
+
+  &Dark {
+    background: variables.$dark-10;
+  }
+
+  &Transparent {
+  }
+
+  &Yellow {
+    background: variables.$yellow;
+  }
+
+  &Red {
+    background: variables.$red;
+  }
+
+  &Small {
+    font-size: variables.$font-size-xs;
+    padding: 10px 25px;
+  }
+
+  &Big {
+    font-size: variables.$font-size-md;
+    padding: 15px 45px;
+  }
+}

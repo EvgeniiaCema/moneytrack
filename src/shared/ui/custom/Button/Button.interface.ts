@@ -1,6 +1,11 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-	className?: string;
-	children: ReactNode;
-};
+type ButtonSize = "small" | "big";
+
+type ButtonVariant = "dark" | "transparent" | "yellow" | "red";
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+  size?: ButtonSize;
+  variant?: ButtonVariant;
+}
