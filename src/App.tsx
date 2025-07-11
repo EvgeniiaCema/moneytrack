@@ -1,4 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
+import { Input } from "./shared/ui/custom/Input/Input";
+import { Button } from "./shared/ui/custom/Button/Button";
 
 export function App() {
 	return (
@@ -11,6 +13,8 @@ export function App() {
 			</nav>
 			<hr />
 			<Outlet />
+			<Input />
+			<Button>button</Button>
 		</div>
 	);
 }
