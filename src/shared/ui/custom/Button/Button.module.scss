@@ -1,31 +1,45 @@
 @use "../../../../styles/variables";
 
 .button {
-  border: none;
-  background: none;
+	border: none;
+	background: none;
+	cursor: pointer;
 
-  &Dark {
-    background: variables.$dark-10;
-  }
+	&Dark {
+		background: variables.$dark-10;
+		color: variables.$white;
+	}
 
-  &Transparent {
-  }
+	&Transparent {
+		background: variables.$white;
+		color: variables.$black;
+	}
 
-  &Yellow {
-    background: variables.$yellow;
-  }
+	&Yellow {
+		background: variables.$yellow;
+		color: variables.$black;
+	}
 
-  &Red {
-    background: variables.$red;
-  }
+	&Red {
+		background: variables.$red;
+		color: variables.$white;
+	}
 
-  &Small {
-    font-size: variables.$font-size-xs;
-    padding: 10px 25px;
-  }
+	&Small {
+		font-size: variables.$font-size-xs;
+		padding: 8px 20px;
+		border-radius: variables.$br-radius-sm;
+	}
 
-  &Big {
-    font-size: variables.$font-size-md;
-    padding: 15px 45px;
-  }
+	&Medium {
+		font-size: variables.$font-size-md;
+		padding: 8px 60px;
+	}
+
+	&Big {
+		font-size: variables.$font-size-md;
+		padding: 13px 60px;
+		border-radius: variables.$br-radius-sm;
+		border: 0.5px solid variables.$black;
+	}
 }
