@@ -1,16 +1,15 @@
+import { useRef } from "react";
 import { Outlet } from "react-router-dom";
 
-import { Input } from "./shared/ui/custom/Input/Input";
-import { Button } from "./shared/ui/custom/Button/Button";
+import { Input } from "@ui/custom/Input/Input";
 
 export function App() {
-	return (
-		<div>
-			<Outlet />
-			<Input placeholder="Amount" type="number" />
-			<Button variant="transparent" size="big">
-				test
-			</Button>
-		</div>
-	);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  return (
+    <div>
+      <Outlet />
+      <Input ref={inputRef} name="amount" placeholder="Amount" type="number" />
+    </div>
+  );
 }

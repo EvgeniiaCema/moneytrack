@@ -1,45 +1,50 @@
-@use "../../../../styles/variables";
+@use "@styles/variables";
 
 .button {
-	border: none;
-	background: none;
-	cursor: pointer;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: variables.$br-radius-sm;
+  border: 0.5px solid variables.$dark-10;
+  font-family: inherit;
 
-	&Dark {
-		background: variables.$dark-10;
-		color: variables.$white;
-	}
+  &Dark {
+    background: variables.$dark-10;
+    color: variables.$white;
+  }
 
-	&Transparent {
-		background: variables.$white;
-		color: variables.$black;
-	}
+  &Transparent {
+    background: variables.$white;
+    color: variables.$dark-10;
+  }
 
-	&Yellow {
-		background: variables.$yellow;
-		color: variables.$black;
-	}
+  &Yellow {
+    background: variables.$yellow;
+    color: variables.$dark-10;
+  }
 
-	&Red {
-		background: variables.$red;
-		color: variables.$white;
-	}
+  &Red {
+    background: variables.$red;
+    color: variables.$white;
+  }
 
-	&Small {
-		font-size: variables.$font-size-xs;
-		padding: 8px 20px;
-		border-radius: variables.$br-radius-sm;
-	}
+  // sizes
+  &Small {
+    font-size: variables.$font-size-xs;
+    padding: 8px 20px;
+  }
 
-	&Medium {
-		font-size: variables.$font-size-md;
-		padding: 8px 60px;
-	}
+  &Medium {
+    font-size: variables.$font-size-md;
+    padding: 8px 60px;
+  }
 
-	&Big {
-		font-size: variables.$font-size-md;
-		padding: 13px 60px;
-		border-radius: variables.$br-radius-sm;
-		border: 0.5px solid variables.$black;
-	}
+  &Big {
+    font-size: variables.$font-size-md;
+    padding: 13px 60px;
+  }
+
+  &FullWidth {
+    width: 100%;
+  }
 }

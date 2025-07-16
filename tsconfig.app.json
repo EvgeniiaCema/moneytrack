@@ -21,7 +21,22 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "baseUrl": "src",
+    "paths": {
+      "@ui/*": ["shared/ui/*"],
+      "@styles/*": ["styles/*"],
+      "@modules/*": ["modules/*"],
+      "@constants/*": ["shared/constants/*"],
+      "@layout/*": ["layout/*"],
+      "@pages/*": ["pages/*"],
+      "@config/*": ["shared/config/*"],
+      "@interfaces/*": ["shared/interfaces/*"],
+      "@hooks/*": ["shared/hooks/*"],
+      "@context/*": ["shared/context/*"],
+      "@assets/*": ["shared/assets/*"],
+      "@utils/*": ["shared/utils/*"]
+    }
   },
   "include": ["src"]
 }
