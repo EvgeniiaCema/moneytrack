@@ -1,0 +1,28 @@
+@use "@styles/variables";
+
+.label {
+	display: block;
+	width: 100%;
+}
+
+.input {
+	width: 100%;
+	padding: 8px 0;
+	font-size: variables.$font-size-md;
+	font-family: inherit;
+	color: variables.$dark-10;
+	background: none;
+
+	border: none;
+	border-bottom: 1px solid variables.$dark-20;
+
+	outline: none;
+
+	&::placeholder {
+		color: variables.$dark-20;
+	}
+
+	&:focus {
+		border-bottom: 1px solid variables.$dark-10;
+	}
+}

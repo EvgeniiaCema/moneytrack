@@ -1,0 +1,32 @@
+@use "@styles/variables";
+
+.buttonIcon {
+	border: none;
+	cursor: pointer;
+
+	&Pill {
+		border-radius: variables.$br-radius-sm;
+		padding: 8px 7px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&Circle {
+		border-radius: variables.$br-radius-circle;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
+	}
+
+	&Red {
+		background: variables.$red;
+		color: variables.$white;
+	}
+
+	&Black {
+		background: variables.$black;
+		color: variables.$white;
+	}
+}
