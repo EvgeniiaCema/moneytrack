@@ -1,14 +1,12 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
 import type { IconType } from "react-icons";
+import type { ButtonHTMLAttributes } from "react";
 
 type ButtonForm = "pill" | "circle";
-type ButtonColor = "red" | "black";
+
+type ButtonVariant = "red" | "black";
 
 export interface ButtonIconProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-	children?: ReactNode;
-	className?: string;
-	form?: ButtonForm;
-	variant?: ButtonColor;
-	Icon?: IconType;
-	iconSize?: number;
+  Icon: IconType;
+  form?: ButtonForm;
+  variant?: ButtonVariant;
 }

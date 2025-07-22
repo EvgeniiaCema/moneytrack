@@ -1,21 +1,34 @@
 import { clsx } from "clsx";
+
 import type { TitleProps } from "./Title.interface";
 
 import styles from "./Title.module.scss";
 
-export const Title = ({ children, size = "large", className, ...props }: TitleProps) => {
-	const Tag = size === "large" ? "h1" : size === "medium" ? "h2" : "h3";
-
-	return (
-		<Tag
-			className={clsx(styles.title, className, {
-				[styles.titleLarge]: size === "large",
-				[styles.titleMedium]: size === "medium",
-				[styles.titleSmall]: size === "small",
-			})}
-			{...props}
-		>
-			{children}
-		</Tag>
-	);
+export const Title = ({ children, size = "large", className, ...attributes }: TitleProps) => {
+  switch (size) {
+    case "large":
+      return (
+        <h1 className={clsx(styles.large, className)} {...attributes}>
+          {children}
+        </h1>
+      );
+    case "medium":
+      return (
+        <h2 className={clsx(styles.medium, className)} {...attributes}>
+          {children}
+        </h2>
+      );
+    case "small":
+      return (
+        <h3 className={clsx(styles.small, className)} {...attributes}>
+          {children}
+        </h3>
+      );
+    default:
+      return (
+        <h1 className={clsx(styles.large, className)} {...attributes}>
+          {children}
+        </h1>
+      );
+  }
 };

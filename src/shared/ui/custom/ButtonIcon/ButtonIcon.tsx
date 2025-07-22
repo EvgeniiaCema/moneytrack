@@ -4,18 +4,18 @@ import type { ButtonIconProps } from "./ButtonIcon.interface";
 
 import styles from "./ButtonIcon.module.scss";
 
-export const ButtonIcon = ({ Icon, iconSize = 18, className, form = "pill", variant = "red", ...attributes }: ButtonIconProps) => {
-	return (
-		<button
-			className={clsx(styles.buttonIcon, className, {
-				[styles.buttonIconPill]: form === "pill",
-				[styles.buttonIconCircle]: form === "circle",
-				[styles.buttonIconRed]: variant === "red",
-				[styles.buttonIconBlack]: variant === "black",
-			})}
-			{...attributes}
-		>
-			{Icon && <Icon size={iconSize} />}
-		</button>
-	);
+export const ButtonIcon = ({ Icon, className, form = "pill", variant = "red", ...attributes }: ButtonIconProps) => {
+  return (
+    <button
+      className={clsx(styles.buttonIcon, className, {
+        [styles.buttonIconPill]: form === "pill",
+        [styles.buttonIconCircle]: form === "circle",
+        [styles.buttonIconRed]: variant === "red",
+        [styles.buttonIconBlack]: variant === "black",
+      })}
+      {...attributes}
+    >
+      <Icon size={19} />
+    </button>
+  );
 };
