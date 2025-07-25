@@ -1,17 +1,19 @@
-import { NavLink } from "react-router-dom";
-import { Transactions } from "@pages/Transactions/Transactions";
+import { Outlet } from "react-router-dom";
 
-import type { LayoutProps } from "./Layout.interface";
+import { Navbar } from "./components/Navbar/Navbar";
+import { NavbarItem } from "./components/NavbarItem/NavbarItem";
 
-export const Layout = ({ children, className, ...attributes }: LayoutProps): JSX.Element => {
-	return (
-		<div className={className} {...attributes}>
-			<div>{children}</div>
-			<nav>
-				<NavLink to="/">
-					<Transactions />
-				</NavLink>
-			</nav>
-		</div>
-	);
+import { OPTIONS } from "./Layout.configuration";
+
+import styles from "./Layout.module.scss";
+
+export const Layout = () => {
+  return (
+    <div>
+      <div>
+        <Outlet />
+      </div>
+      <Navbar options={OPTIONS} onRenderOption={(option) => <NavbarItem key={option.path} {...option} />} />
+    </div>
+  );
 };
